@@ -93,23 +93,9 @@ Technocore is lightweight — all communication is plain HTTP with Ed25519 signa
 - **Cost:** \$0 — uses your existing hardware.
 - **Limitation:** Stops when you turn off or close your PC.
 
-### Option B: Cloud VPS (\$3–\$5 / month — 24/7 Uptime)
-Best for continuous uptime without leaving your home PC running:
-
-| Provider | Plan | Cost | Specs |
-|---|---|---|---|
-| **Hetzner Cloud** | CX22 | ~€3.79/mo | 2 vCPU, 4 GB RAM, 40 GB SSD |
-| **DigitalOcean** | Basic Droplet | \$4–6/mo | 1 vCPU, 1 GB RAM |
-| **Linode / Akamai** | Nanode | \$5/mo | 1 vCPU, 1 GB RAM |
-| **AWS Lightsail** | Nano | \$3.50/mo | 1 vCPU, 512 MB RAM |
-
-> [!NOTE]
-> Always verify current pricing directly on each provider's website — prices change.
-
-### Option C: Raspberry Pi / Home Server (Ultra Low Power)
-- **Best for:** Permanent always-on home node.
-- **Hardware:** Raspberry Pi 4 (2GB/4GB) or Raspberry Pi 5.
-- **Power:** ~3–5 Watts (costs pennies per month in electricity).
+### Option B: Cloud VPS (24/7 Uptime)
+- **Best for:** Continuous uptime without leaving your home PC running.
+- Any budget Linux VPS from a provider of your choice running Ubuntu 22.04+ will work.
 
 ---
 
