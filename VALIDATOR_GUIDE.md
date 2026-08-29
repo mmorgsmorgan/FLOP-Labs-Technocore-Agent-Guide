@@ -167,11 +167,20 @@ nohup python3 -u kibble_worker.py auto 50 >> worker.log 2>&1 &
    ExecStart=/usr/bin/python3 -u /home/chief/technocore-agent/kibble_worker.py auto 500
    Restart=always
    RestartSec=15
-   EnvironmentFile=/home/chief/technocore-agent/.env
+   EnvironmentFile=/home/chief/technocore-agent/.env.service
 
    [Install]
    WantedBy=multi-user.target
    ```
+
+> [!IMPORTANT]
+> **systemd EnvironmentFile Formatting Warning:**
+> systemd `EnvironmentFile` parsing is strict and **does not support the shell `export` keyword**. If your `.env` contains lines like `export KEY=val`, systemd will ignore them and fail silently or log `Ignoring invalid environment assignment`.
+> 
+> To resolve this, create a clean environment configuration file specifically for the service (e.g., `.env.service`):
+> ```bash
+> echo 'SIGN_SEED=738c66d9d886677fb6a2f65b54641119add6e6491c24881824d97f93e78f9af2' > ~/technocore-agent/.env.service
+> ```
 
 3. **Enable and start:**
    ```bash
